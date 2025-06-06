@@ -39,7 +39,7 @@ if 'data_loaded' not in st.session_state:
         st.session_state['data'] = df
         
         status.update(label="Preparando modelo de Inteligência Artificial...")
-        llm = cached_load_llm() #Usar a GPU
+        llm = None #cached_load_llm() #Usar a GPU
         st.session_state['llm'] = llm
         
         status.update(label="Tudo pronto! Bem-vindo(a) ao Dashboard.", state="complete", expanded=False)
